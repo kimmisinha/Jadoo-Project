@@ -1,14 +1,27 @@
 import React from 'react';
 import './App.css';
 import logo from './logo.svg';
-
+import Header from './components/Header/Header';
+import Travel from './components/Travel/Travel';
+import Category from './components/Category /Category';
+import TopSelling from './components/TopSelling/TopSelling';
+import EasyandFast from './components/EasyandFast/EasyandFast';
+import Testimonials from './components/Testimonials/Testimonials';
+import Companyname from './components/Companyname/Companyname.jsx';
+import Email from './components/Email/Email';
+import Footer from "./components/Footer/Footer.jsx"
 function App() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline text-col bg-black text-cyan-400">
-        
-        Hello world!
-      </h1>
+      <Header/>
+       <Travel/>
+       <Category/>
+       <TopSelling/>
+       <EasyandFast/>
+       <Testimonials/>
+       <Companyname/>
+       <Email/>
+       <Footer/>
     </div>
   );
 }
