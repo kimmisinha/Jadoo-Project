@@ -6,14 +6,14 @@ function EasyandFast() {
     <div className="container mx-auto py-6">
       <div className="flex justify-between">
         {/* Left Box */}
-        <div className="w-1/2 p-6 bg-gray-100 rounded-lg">
-          <p className="text-xs text-gray-600 mb-2">Light Black Small Letter</p>
-          <h1 className="text-3xl font-bold mb-4">Book Your Next Trip In 3 Easy Steps</h1>
+        <div className="w-2/3 p-6 bg-[#FFFEFE] rounded-lg">
+          <p className="text-[#5E6282] font-rubik font-bold">Easy and Fast</p>
+          <h1 className="text-[#181E4B] text-6xl font-DM font-bold">Book Your Next Trip In 3 Easy Steps</h1>
           
           <div className="flex mb-8">
-            <img src={girlimage} alt="Step 1" className="w-16 h-16 rounded-full mr-4" />
+            <img src={girlimage} alt="Step 1" className=" mt-4 w-16 h-10 rounded-full mr-4" />
             <div>
-              <h2 className="text-xl font-bold mb-2">Choose Destination</h2>
+              <h2 className="text-xl font-bold mb-2 mt-4">Choose Destination</h2>
               <p className="text-gray-600">Choose your favourite place. No matter where you travel inside the World.</p>
             </div>
           </div>
@@ -36,7 +36,7 @@ function EasyandFast() {
         </div>
         
         {/* Right Box */}
-        <div className="w-1/2 p-6 bg-gray-100 rounded-lg">
+        <div className="w-5/2 p-6 bg-gray-100 rounded-lg pt-6 pr-4 pb-8 pl-2 mt-20 ml-20 mr-20 ">
           {/* Important Image */}
           <img src={girlimage} alt="Important Image" className="mx-auto w-48 h-48 rounded-full mb-8" />
           
@@ -51,7 +51,7 @@ function EasyandFast() {
             <p className="text-gray-600">Building Info</p>
             <div className="flex justify-between items-center">
               <p>24 people going</p>
-              <img src={girlimage} alt="Icon" className="w-8 h-8" />
+              <img src={girlimage} alt="Icon" className="w-8 h-6" />
             </div>
           </div>
           
@@ -65,10 +65,10 @@ function EasyandFast() {
                   <p>24 people going</p>
                 </div>
               </div>
-              <div className="w-1/2">
+              <div className="w-3/5">
                 <div className="flex items-center justify-end">
                   <p>24 people going</p>
-                  <img src={girlimage} alt="Icon" className="w-8 h-8 ml-2" />
+                  <img src={girlimage} alt="Icon" className="w-8 h-6 ml-2" />
                 </div>
               </div>
             </div>
