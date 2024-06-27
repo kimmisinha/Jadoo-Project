@@ -18,7 +18,7 @@ function App() {
        <Category/>
        <TopSelling/>
        <EasyandFast/>
-       {/* <Testimonials/> */}
+       <Testimonials/>
        <Companyname/>
        <Email/>
        <Footer/>

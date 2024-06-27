@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./testionials.css";
 
 // Import your images
 import Icon1 from "../../assets/testimonial/author.png";
@@ -32,49 +33,46 @@ function Testimonials() {
   ];
 
   // State to manage the active testimonial content
-  const [activeContent, setActiveContent] = useState("");
+  const [activeTestimonial, setActiveTestimonial] = useState(testimonialsData[0]);
 
   // Function to handle click and change content
-  const handleContentChange = (content) => {
-    setActiveContent(content);
+  const handleContentChange = (testimonial) => {
+    setActiveTestimonial(testimonial);
   };
 
   return (
-    <div className="container mx-auto py-12">
-      {/* Section Title */}
-      <div className="text-center mb-8">
-        <p className="text-[#5E6282] font-rubik text-lg font-semibold">Testimonials</p>
-        <h2 className="text-[#14183E] text-4xl font-bold">What People Say About Us.</h2>
+    <div className="container mx-auto py-12 flex justify-between items-start mt-40">
+      {/* Left Side: Title and Dots */}
+      <div className="w-1/3">
+        <div className="text-left mb-8">
+          <p className="text-[#5E6282] font-rubik text-lg font-semibold">Testimonials</p>
+          <h2 className="text-[#14183E] text-6xl font-bold volkhov-regular">What People Say About Us.</h2>
+        </div>
+        {/* Pagination */}
+        <div className="flex justify-start mt-20">
+          {/* Icons for Content Change */}
+          {testimonialsData.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className={`w-4 h-4 bg-gray-300 rounded-full mx-1 cursor-pointer ${
+                activeTestimonial.id === testimonial.id ? "bg-gray-700" : ""
+              }`}
+              onClick={() => handleContentChange(testimonial)}
+            ></div>
+          ))}
+        </div>
       </div>
 
-      {/* Testimonials Cards */}
-      <div className="flex justify-center">
-        {testimonialsData.map((testimonial) => (
-          <div key={testimonial.id} className="relative bg-white shadow-lg rounded-lg p-6 max-w-2xl mx-auto mr-4">
-            <img src={testimonial.image} alt={`Author ${testimonial.id}`} className="w-16 h-16 rounded-full absolute -top-4 right-4" />
-            <div className="flex flex-col">
-              <p className="text-gray-600">
-                {activeContent === testimonial.content ? testimonial.content : null}
-              </p>
-              <h4 className="text-[#14183E] text-xl font-bold mt-4">{testimonial.author}</h4>
-              <p className="text-[#5E6282]">{testimonial.location}</p>
-            </div>
+      {/* Right Side: Testimonial Card */}
+      <div className="w-2/3 flex justify-center h-60">
+        <div className="relative bg-white shadow-lg rounded-lg p-6 max-w-2xl mx-auto">
+          <img src={activeTestimonial.image} alt={`Author ${activeTestimonial.id}`} className="w-16 h-16 rounded-full absolute -top-8 left-4" />
+          <div className="flex flex-col">
+            <p className="text-gray-600 mt-4">{activeTestimonial.content}</p>
+            <h4 className="text-[#14183E] text-xl font-bold mt-4">{activeTestimonial.author}</h4>
+            <p className="text-[#5E6282]">{activeTestimonial.location}</p>
           </div>
-        ))}
-      </div>
-
-      {/* Pagination */}
-      <div className="flex justify-center mt-8">
-        {/* Icons for Content Change */}
-        {testimonialsData.map((testimonial) => (
-          <img
-            key={testimonial.id}
-            src={testimonial.image}
-            alt={`Icon ${testimonial.id}`}
-            className="w-8 h-8 cursor-pointer mx-1"
-            onClick={() => handleContentChange(testimonial.content)}
-          />
-        ))}
+        </div>
       </div>
     </div>
   );
