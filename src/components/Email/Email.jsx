@@ -1,31 +1,35 @@
 import React from 'react';
 import message from "../../assets/cta/send.png";
-import shapebg from "../../assets/cta/shapebg.png";
+import ringleft from "../../assets/cta/ringleft.png";
+import ringright from "../../assets/cta/ringright.png";
 
 function Email() {
   return (
-    <div className="relative bg-gray-100 flex items-center justify-center h-screen border-4">
-      <img src={message} alt="Message Icon" className="absolute top-0 left-8" />
-      <div className="px-20 py-7 border border-gray-300 rounded">
-        <h2 className="text-xl bg-gray-100 font-semibold text-[#5E6282]  text-secondary lh-1-7 mb-7">
-          
-          Subscribe to get information, latest news and other interesting offers about Cobham
-        </h2>
-        <form className="flex justify-center items-center space-x-4">
-          <input
-            type="email"
-            placeholder="Enter email"
-            className="px-20 border border-gray-300 rounded"
-          />
-          <button
-            type="submit "
-            className="bg-orange-500 text-white py-2 px-4 rounded-md"
-          >
-            Subscribe
-          </button>
-        </form>
+    <div className='h-full mt-32 mb-32 rounded-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg'>
+      <div className="relative bg-gray-100 flex items-center justify-center ml-20 mr-20 px-96 py-40 border-4 p-8 h-full full-tl-lg rounded-tr-lg rounded-br-lg rounded-bl-lg">
+        <img src={ringleft} alt="ringleft Icon" className="absolute bottom-0 left-0 h-full" />
+        <img src={ringright} alt="ringright Icon" className="absolute top-0 right-0 h-full" />
+        <img src={message} alt="message Icon" className="absolute top-1 right-1" />
+
+        <div className="w-full max-w-xl px-8 py-6 border border-gray-300 rounded">
+          <h2 className="text-xl font-semibold text-gray-700 mb-4">
+            Subscribe to get information, latest news and other interesting offers about Cobham
+          </h2>
+          <form className="flex justify-center items-center space-x-4">
+            <input
+              type="email"
+              placeholder="Enter email"
+              className="flex-1 px-4 py-2 border border-gray-300 rounded"
+            />
+            <button
+              type="submit"
+              className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-md transition-colors"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
-      <img src={shapebg} alt="Shape Background" className="absolute bottom-4 left-4 w-24 h-24 opacity-50" />
     </div>
   );
 }
