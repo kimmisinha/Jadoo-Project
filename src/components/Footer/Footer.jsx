@@ -1,8 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-// import Icon1 from "../../assets/testimonial/applestore.png";
-// import Icon2 from "../../assets/testimonial/playstore.png";
+import Icon1 from "../../assets/testimonial/applestore.png";
+import Icon2 from "../../assets/testimonial/playstore.png";
 
 const Footer = () => {
   return (
@@ -41,8 +41,8 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between items-center mt-10">
           <p className="text-gray-600">&copy; All rights reserved@jadoo.co</p>
           <div className="flex space-x-4">
-            {/* <a href="#"><img src={Icon2} alt="Get it on Google Play" className="h-10" /></a>
-            <a href="#"><img src={Icon1} alt="Available on the Apple Store" className="h-10" /></a> */}
+            <a href="#"><img src={Icon2} alt="Get it on Google Play" className="h-10" /></a>
+            <a href="#"><img src={Icon1} alt="Available on the Apple Store" className="h-10" /></a>
             <a href="https://facebook.com" className="text-gray-600 hover:text-gray-900"><FontAwesomeIcon icon={faFacebook} size="2x" /></a>
             <a href="https://instagram.com" className="text-gray-600 hover:text-gray-900"><FontAwesomeIcon icon={faInstagram} size="2x" /></a>
             <a href="https://twitter.com" className="text-gray-600 hover:text-gray-900"><FontAwesomeIcon icon={faTwitter} size="2x" /></a>
